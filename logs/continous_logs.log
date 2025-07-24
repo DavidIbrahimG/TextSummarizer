@@ -21,3 +21,201 @@
 [2025-07-23 13:03:34,806: INFO: common: created directory at: artifacts/data_transformation]
 [2025-07-23 13:03:38,988: INFO: data_transformation_pipeline: Data transformation completed successfully.]
 [2025-07-23 13:03:39,025: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 00:51:08,919: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 00:51:08,920: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:51:08,921: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:51:08,921: INFO: common: created directory at: artifacts]
+[2025-07-24 00:51:08,921: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 00:51:08,921: INFO: data_ingestion: File already exits]
+[2025-07-24 00:51:08,982: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 00:51:08,982: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 00:51:08,983: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:51:08,983: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:51:08,984: INFO: common: created directory at: artifacts]
+[2025-07-24 00:51:08,984: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 00:51:09,880: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 00:51:09,923: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 00:51:09,923: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 00:51:09,925: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:51:09,925: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:51:09,925: INFO: common: created directory at: artifacts]
+[2025-07-24 00:51:09,925: ERROR: main: 'ConfigurationManager' object has no attribute 'params']
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 10, in initiate_model_trainer
+    model_trainer_config = config.get_model_trainer_config()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/config/configuration.py", line 47, in get_model_trainer_config
+    params=self.params.TrainingArguments
+AttributeError: 'ConfigurationManager' object has no attribute 'params'
+[2025-07-24 00:56:54,487: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 00:56:54,488: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:56:54,489: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:56:54,489: INFO: common: created directory at: artifacts]
+[2025-07-24 00:56:54,489: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 00:56:54,489: INFO: data_ingestion: File already exits]
+[2025-07-24 00:56:54,555: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 00:56:54,555: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 00:56:54,556: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:56:54,556: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:56:54,556: INFO: common: created directory at: artifacts]
+[2025-07-24 00:56:54,556: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 00:56:55,380: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 00:56:55,420: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 00:56:55,420: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 00:56:55,421: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 00:56:55,422: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 00:56:55,422: INFO: common: created directory at: artifacts]
+[2025-07-24 00:56:55,422: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 00:58:23,924: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/components/model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-07-24 01:04:18,311: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 01:04:18,312: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:04:18,313: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:04:18,313: INFO: common: created directory at: artifacts]
+[2025-07-24 01:04:18,313: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 01:04:18,313: INFO: data_ingestion: File already exits]
+[2025-07-24 01:04:18,373: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 01:04:18,373: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 01:04:18,374: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:04:18,374: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:04:18,374: INFO: common: created directory at: artifacts]
+[2025-07-24 01:04:18,374: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 01:04:19,253: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 01:04:19,294: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 01:04:19,294: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 01:04:19,295: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:04:19,296: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:04:19,296: INFO: common: created directory at: artifacts]
+[2025-07-24 01:04:19,296: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 01:04:23,234: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/components/model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-07-24 01:05:55,176: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 01:05:55,177: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:05:55,178: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:05:55,178: INFO: common: created directory at: artifacts]
+[2025-07-24 01:05:55,178: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 01:05:55,178: INFO: data_ingestion: File already exits]
+[2025-07-24 01:05:55,235: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 01:05:55,235: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 01:05:55,236: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:05:55,236: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:05:55,236: INFO: common: created directory at: artifacts]
+[2025-07-24 01:05:55,236: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 01:05:55,966: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 01:05:56,038: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 01:05:56,038: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 01:05:56,039: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:05:56,039: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:05:56,039: INFO: common: created directory at: artifacts]
+[2025-07-24 01:05:56,039: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 01:05:59,241: ERROR: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/components/model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-07-24 01:06:46,699: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 01:06:46,700: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:06:46,701: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:06:46,701: INFO: common: created directory at: artifacts]
+[2025-07-24 01:06:46,701: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 01:06:46,701: INFO: data_ingestion: File already exits]
+[2025-07-24 01:06:46,759: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 01:06:46,759: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 01:06:46,760: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:06:46,761: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:06:46,761: INFO: common: created directory at: artifacts]
+[2025-07-24 01:06:46,761: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 01:06:47,439: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 01:06:47,481: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 01:06:47,481: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 01:06:47,483: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:06:47,483: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:06:47,483: INFO: common: created directory at: artifacts]
+[2025-07-24 01:06:47,483: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 01:06:50,741: ERROR: main: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`]
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/components/model_trainer.py", line 22, in train
+    trainer_args = TrainingArguments(
+  File "<string>", line 133, in __init__
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/training_args.py", line 1790, in __post_init__
+    self.device
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/training_args.py", line 2319, in device
+    return self._setup_devices
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/utils/generic.py", line 67, in __get__
+    cached = self.fget(obj)
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/training_args.py", line 2189, in _setup_devices
+    raise ImportError(
+ImportError: Using the `Trainer` with `PyTorch` requires `accelerate>=0.26.0`: Please run `pip install transformers[torch]` or `pip install 'accelerate>=0.26.0'`
+[2025-07-24 01:08:50,546: INFO: main: >>>>> stage Data Ingestion stage started <<<<<]
+[2025-07-24 01:08:50,547: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:08:50,548: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:08:50,548: INFO: common: created directory at: artifacts]
+[2025-07-24 01:08:50,548: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-24 01:08:50,548: INFO: data_ingestion: File already exits]
+[2025-07-24 01:08:50,613: INFO: main: >>>>> stage Data Ingestion stage completed <<<<<]
+[2025-07-24 01:08:50,613: INFO: main: >>>>> stage Data Transformation stage started <<<<<]
+[2025-07-24 01:08:50,614: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:08:50,614: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:08:50,615: INFO: common: created directory at: artifacts]
+[2025-07-24 01:08:50,615: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-24 01:08:51,383: INFO: data_transformation_pipeline: Data transformation completed successfully.]
+[2025-07-24 01:08:51,431: INFO: main: >>>>> stage Data Transformation stage completed <<<<<]
+[2025-07-24 01:08:51,431: INFO: main: stage Model Trainer stage initiated]
+[2025-07-24 01:08:51,432: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:08:51,433: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:08:51,433: INFO: common: created directory at: artifacts]
+[2025-07-24 01:08:51,433: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 01:09:25,424: ERROR: main: MPS backend out of memory (MPS allocated: 11.69 GB, other allocations: 15.44 GB, max allowed: 27.20 GB). Tried to allocate 375.40 MB on private pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).]
+Traceback (most recent call last):
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/main.py", line 37, in <module>
+    model_trainer_pipeline.initiate_model_trainer()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/pipeline/model_trainer_pipeline.py", line 12, in initiate_model_trainer
+    model_trainer_config.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/src/textSummarizer/components/model_trainer.py", line 35, in train
+    trainer.train()
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2206, in train
+    return inner_training_loop(
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/trainer.py", line 2548, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/transformers/trainer.py", line 3797, in training_step
+    self.accelerator.backward(loss, **kwargs)
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/accelerate/accelerator.py", line 2578, in backward
+    loss.backward(**kwargs)
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/Users/davidibrahim/Programming/mlops1/summarizer/venv/lib/python3.10/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: MPS backend out of memory (MPS allocated: 11.69 GB, other allocations: 15.44 GB, max allowed: 27.20 GB). Tried to allocate 375.40 MB on private pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).
+[2025-07-24 01:16:30,936: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:16:30,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:16:30,939: INFO: common: created directory at: artifacts]
+[2025-07-24 01:16:30,939: INFO: common: created directory at: artifacts/model_trainer]
+[2025-07-24 01:19:01,773: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2025-07-24 01:19:01,775: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-24 01:19:01,775: INFO: common: created directory at: artifacts]
+[2025-07-24 01:19:01,776: INFO: common: created directory at: artifacts/model_trainer]
